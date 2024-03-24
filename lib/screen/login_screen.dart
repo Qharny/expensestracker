@@ -1,6 +1,6 @@
 // screens/login_screen.dart
 import 'package:flutter/material.dart';
-import 'package:expense_tracker_app/screens/home_screen.dart';
+import 'home.dart';
 
 class LoginScreen extends StatelessWidget {
   @override

@@ -1,6 +1,6 @@
 // main.dart
 import 'package:flutter/material.dart';
-import 'package:expense_tracker_app/screens/login_screen.dart';
+import 'screen/login_screen.dart';
 
 void main() {
   runApp(MyApp());
