@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'views/view_expenses.dart';
-import 'views/widget.dart';
+import 'views/add_expenses.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key}); // Corrected constructor syntax
