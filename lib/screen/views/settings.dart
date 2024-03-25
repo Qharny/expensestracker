@@ -1,5 +1,6 @@
 // ignore_for_file: avoid_print
 
+import 'package:expensestracker/screen/views/account_settings.dart';
 import 'package:flutter/material.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -78,7 +79,10 @@ class _SettingsPageState extends State<SettingsPage> {
             ElevatedButton(
               onPressed: () {
                 // Navigate to Account Settings page
-                Navigator.pushNamed(context, '/account_settings');
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (_) => const AccountSettingsPage()));
               },
               child: const Text('Account Settings'),
             ),
