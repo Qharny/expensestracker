@@ -2,6 +2,9 @@
 
 import 'package:flutter/material.dart';
 
+import '../../models/expenses.dart';
+import 'view_expenses.dart';
+
 class AddExpenseForm extends StatefulWidget {
   const AddExpenseForm({super.key});
 
@@ -98,6 +101,10 @@ class _AddExpenseFormState extends State<AddExpenseForm> {
     String category = _categoryController.text;
     DateTime date = _selectedDate;
 
+    // Create a new Expense object with the submitted data
+    Expense newExpense =
+        Expense(amount: amount, category: category, date: date);
+
     // Reset form after submission
     _amountController.clear();
     _categoryController.clear();
@@ -105,7 +112,12 @@ class _AddExpenseFormState extends State<AddExpenseForm> {
       _selectedDate = DateTime.now();
     });
 
-    // Print the entered data for now, replace with database operations
-    print('Amount: $amount, Category: $category, Date: $date');
+    // Navigate to the history page and pass the list containing only the new expense
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => ExpensesHistoryPage(expenses: [newExpense]),
+      ),
+    );
   }
 }

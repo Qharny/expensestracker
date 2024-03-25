@@ -17,7 +17,7 @@ class AnalyticsPage extends StatelessWidget {
   //   ),
   // ];
 
-  const AnalyticsPage(this.seriesList);
+  const AnalyticsPage(this.seriesList, {super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -29,12 +31,13 @@ class _SettingsPageState extends State<SettingsPage> {
             const SizedBox(height: 10),
             DropdownButton<String>(
               value: _currencySymbol,
-              onChanged: ( newValue) {
+              onChanged: (newValue) {
                 setState(() {
                   _currencySymbol = newValue!;
                 });
               },
-              items: <String>['\$', '€', '£', '¥'].map<DropdownMenuItem<String>>((String value) {
+              items: <String>['\$', '€', '£', '¥']
+                  .map<DropdownMenuItem<String>>((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
                   child: Text(value),
@@ -54,7 +57,8 @@ class _SettingsPageState extends State<SettingsPage> {
                   _dateFormat = newValue!;
                 });
               },
-              items: <String>['MM/dd/yyyy', 'dd/MM/yyyy', 'yyyy/MM/dd'].map<DropdownMenuItem<String>>((String value) {
+              items: <String>['MM/dd/yyyy', 'dd/MM/yyyy', 'yyyy/MM/dd']
+                  .map<DropdownMenuItem<String>>((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
                   child: Text(value),

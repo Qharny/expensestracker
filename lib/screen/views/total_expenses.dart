@@ -9,7 +9,7 @@ class TotalExpensesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Total Expenses'),
+        title: const Text('Total Expenses'),
       ),
       body: ListView.builder(
         itemCount: totalExpenses.length,

@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-
 import '../../models/expenses.dart';
 
 class ExpensesHistoryPage extends StatelessWidget {
   final List<Expense> expenses; // List of expenses to display
 
-  const ExpensesHistoryPage(this.expenses, {super.key});
+  const ExpensesHistoryPage({super.key, required this.expenses});
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +18,7 @@ class ExpensesHistoryPage extends StatelessWidget {
           Expense expense = expenses[index];
           return ListTile(
             title: Text('Amount: ${expense.amount.toString()}'),
-            subtitle: Text(
-                'Category: ${expense.category}\nDate: ${expense.date.toString()}'),
+            subtitle: Text('Category: ${expense.category}\nDate: ${expense.date.toString()}'),
           );
         },
       ),
