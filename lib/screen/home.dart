@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'views/widget.dart';
 
 class HomeScreen extends StatelessWidget {

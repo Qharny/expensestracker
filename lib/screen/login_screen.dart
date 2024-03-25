@@ -7,7 +7,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Login'),
+        title: const Text('Login'),
       ),
       body: Center(
         child: ElevatedButton(
@@ -17,7 +17,7 @@ class LoginScreen extends StatelessWidget {
               MaterialPageRoute(builder: (context) => HomeScreen()),
             );
           },
-          child: Text('Login'),
+          child: const Text('Login'),
         ),
       ),
     );
